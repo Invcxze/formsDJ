@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+</head>
+<body>
+    <section class="reg">
+        <div class="reg__wrap">
+            <div class="registration_block">
+                <div class="registration_title">
+                    <h2>Make an appointment</h2>
+                </div>
+                <form class="reg_block" method="post" action="postuser/">
+                    {% csrf_token %}
+                    <div class="reg1">
+                        <input type="text" class="input" placeholder="Name" name="Name">
+                        <input type="email" class="input" placeholder="Email" name="Email">
+                    </div>
+                    <div class="reg2">
+                        <input type="tel" class="input" placeholder="Phone Number" name="Phone Number">
+                        <input type="text" class="input" placeholder="Select Service" name="Select Service">
+                    </div>
+                    <div class="reg__input_bottom">
+                        <textarea class="input__bottom" name="about" placeholder="Tell us about the car needing service(s)"></textarea>
+                    </div>
+                    <div class="reg__btn">
+                        <button type="submit" class="reg__button"> Make an Appointment </button>
+                    </div>
+                </form>
+            </div>
+            <div class="reg__info">
+                <div class="reg__info_title">
+                    <h1>Maxime placeat facere possimus omnis</h1>
+                </div>
+                <div class="reg__info_log">
+                    <p>17k</p>
+                </div>
+                <div class="reg__info_text">
+                    <p>customers served (and counting)</p>
+                </div>
+    </section>
+</body>
+</html>
